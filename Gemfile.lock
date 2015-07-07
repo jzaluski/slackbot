@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/macobo/chat-adapter.git
+  remote: git://github.com/jzaluski/chat-adapter.git
   revision: 3cce46e93a79a83ea31dd4812f541d09b54ae5cb
   specs:
     chat-adapter (0.0.1)
