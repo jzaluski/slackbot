@@ -20,7 +20,7 @@ log = ChatAdapter.log
 # Do this thing in this block each time the bot hears a message:
 bot.on_message do |message, info|
   # ignore all messages not directed to this bot
-  unless message.start_with? 'aeropress: '
+  unless message.start_with? ':coffee:'
     next # don't process the next lines in this block
   end
 
@@ -37,7 +37,7 @@ bot.on_message do |message, info|
 
   # answer the query!
   # this bot simply echoes the message back
-  "@#{info[:user]}: #{command}"
+  "@#{info[:user]}: #{':coffee:!!!'}"
 end
 
 # actually start the bot
