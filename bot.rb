@@ -20,16 +20,8 @@ log = ChatAdapter.log
 # Do this thing in this block each time the bot hears a message:
 bot.on_message do |message, info|
   # ignore all messages not directed to this bot
-  unless info.include? ':coffee:'
+  unless message.include? ':coffee:'
     next # don't process the next lines in this block
-  end
-
-  # Conditionally send a direct message to the person saying whisper
-  if message == 'aeropress: whisper'
-    # log some info - useful when something doesn't work as expected
-    log.debug("Someone whispered! #{info}")
-    # and send the actual message
-    bot.direct_message(info[:user], "whisper-whisper")
   end
 
   # split the message in 2 to get what was actually said.
