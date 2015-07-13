@@ -20,16 +20,15 @@ log = ChatAdapter.log
 # Do this thing in this block each time the bot hears a message:
 bot.on_message do |message, info|
   # ignore all messages not directed to this bot
-  unless message.include? ':coffee:'
-    next # don't process the next lines in this block
+  if message.include? ':coffee:'
+    
+    # split the message in 2 to get what was actually said.
+    botname, command = message.split(': ', 2)
+
+    # answer the query!
+    # this bot simply echoes the message back
+    "@#{info[:user]}: #{':coffee:!!!'}"
   end
-
-  # split the message in 2 to get what was actually said.
-  botname, command = message.split(': ', 2)
-
-  # answer the query!
-  # this bot simply echoes the message back
-  "@#{info[:user]}: #{':coffee:!!!'}"
 end
 
 # actually start the bot
